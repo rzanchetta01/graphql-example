@@ -1,0 +1,22 @@
+type Query {
+    getposts(id: ID): Post
+}
+
+type Post {
+    id : String
+    followed : PostInfo
+    popular: PostInfo
+    relatedToInterests: PostInfo
+}
+
+type PostInfo {
+    id: String
+    title: String
+    content: String
+    author: Author
+}
+
+type Author {
+    id: String
+    name: String
+}
